@@ -1,0 +1,26 @@
+{
+    "co2": {
+      "unit": "ppm",
+      "good_max": 800,
+      "moderate_max": 1200,
+      "poor_above": 1200,
+      "trend_deadband": 50
+    },
+    "pm25": {
+      "unit": "ug/m3",
+      "good_max": 5,
+      "moderate_max": 15,
+      "poor_above": 15,
+      "trend_deadband": 2
+    },
+    "temperature": {
+      "unit": "C",
+      "comfort_min": 20,
+      "comfort_max": 24
+    },
+    "humidity": {
+      "unit": "%",
+      "comfort_min": 30,
+      "comfort_max": 60
+    }
+  }

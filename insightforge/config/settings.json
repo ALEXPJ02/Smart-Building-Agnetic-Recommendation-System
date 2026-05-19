@@ -1,0 +1,8 @@
+{
+    "trend_window_minutes": 30,
+    "trend_window_min": 15,
+    "trend_window_max": 60,
+    "stale_reading_minutes": 15,
+    "data_source_primary": "smartcitizen_api",
+    "data_source_fallback": "csv"
+  }

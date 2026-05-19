@@ -1,0 +1,92 @@
+[
+  {
+    "device_id": "UTS_IAQ_1",
+    "location_name": "Simona's UTS desk",
+    "aliases": ["DESK", "SIMONA'S DESK"],
+    "building": "UTS",
+    "floor": "",
+    "zone_type": "",
+    "active": true,
+    "notes": "Woolcock (Aug 2025): Brian's Desk. Installed Nov 2025. Floor/zone not specified on sheet."
+  },
+  {
+    "device_id": "UTS_IAQ_2",
+    "location_name": "Simona indoor home office",
+    "aliases": ["home office"],
+    "building": "home",
+    "floor": "",
+    "zone_type": "",
+    "active": true,
+    "notes": "Off-campus (home). Woolcock: Lab - in front of tissue room 4. Sheet flagged CO2 issue — confirm before demo use."
+  },
+  {
+    "device_id": "UTS_IAQ_3",
+    "location_name": "Small meeting room CB02.11.153",
+    "aliases": ["meeting room"],
+    "building": "UTS",
+    "floor": "11",
+    "zone_type": "meeting_room",
+    "active": true,
+    "notes": "Woolcock: Lab - end of lab close to window. Installed 9/12/2025. Room code CB02.11.153 used for floor; confirm with facilities if needed."
+  },
+  {
+    "device_id": "UTS_IAQ_4",
+    "location_name": "Simona - home kitchen",
+    "aliases": ["home kitchen"],
+    "building": "",
+    "floor": "",
+    "zone_type": "kitchen",
+    "active": true,
+    "notes": "Off-campus (home). Woolcock: Room 301 - lab manager office. zone_type set to kitchen from UTS location name only."
+  },
+  {
+    "device_id": "UTS_IAQ_7",
+    "location_name": "Reception Office Level 12",
+    "aliases": ["reception"],
+    "building": "UTS",
+    "floor": "12",
+    "zone_type": "reception",
+    "active": true,
+    "notes": "Woolcock: Lab - Tissue room 4. Installed 9/12/2025."
+  },
+  {
+    "device_id": "UTS_IAQ_8",
+    "location_name": "Large Meeting Room L12 CB02.12.225",
+    "aliases": ["large meeting room"],
+    "building": "UTS",
+    "floor": "12",
+    "zone_type": "meeting_room",
+    "active": true,
+    "notes": "Woolcock: Lab - in the front, close to the entrance. Installed 9/12/2025."
+  },
+  {
+    "device_id": "UTS_IAQ_9",
+    "location_name": "Simona's garage indoor",
+    "aliases": ["garage"],
+    "building": "",
+    "floor": "",
+    "zone_type": "",
+    "active": true,
+    "notes": "Off-campus (home). Woolcock: basement outdoor air sample (from 11 Aug 2025). Sheet once marked not working; later working again at home — confirm status."
+  },
+  {
+    "device_id": "UTS_IAQ_10",
+    "location_name": "Printer area",
+    "aliases": ["Printer"],
+    "building": "UTS",
+    "floor": "",
+    "zone_type": "",
+    "active": true,
+    "notes": "Woolcock: Office - in front of the kitchen on the desk. Installed 9/12/2025. Floor not on sheet — add when you know building level."
+  },
+  {
+    "device_id": "UTS_IAQ_11",
+    "location_name": "Big Kitchen Level 11",
+    "aliases": ["Big Kitchen"],
+    "building": "UTS",
+    "floor": "11",
+    "zone_type": "kitchen",
+    "active": true,
+    "notes": "Woolcock: Office - student desk close to entrance. Installed 9/12/2025."
+  }
+]
