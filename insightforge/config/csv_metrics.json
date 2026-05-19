@@ -1,0 +1,8 @@
+{
+  "metric_files": {
+    "co2": "Sensirion_SCD30_-_CO2",
+    "pm25": "Sensirion_SEN5X_-_PM2.5",
+    "temperature": "Sensirion_SHT31_-_Temperature",
+    "humidity": "Sensirion_SHT31_-_Humidity"
+  }
+}
