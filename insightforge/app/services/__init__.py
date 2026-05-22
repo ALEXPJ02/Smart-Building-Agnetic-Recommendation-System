@@ -5,6 +5,7 @@ from app.services.location_resolver import (
     LocationNotFoundError,
     LocationResolver,
 )
+from app.services.recommendation_service import RecommendationService
 from app.services.risk_service import RiskService
 
 __all__ = [
@@ -15,5 +16,6 @@ __all__ = [
     "CsvFileNotFoundError",
     "LocationNotFoundError",
     "LocationResolver",
+    "RecommendationService",
     "RiskService",
 ]
