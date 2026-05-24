@@ -1,0 +1,12 @@
+{
+  "data": {
+    "id": 18774,
+    "name": "UTS_IAQ_1",
+    "sensors": [
+      {"id": "co2-sensor", "name": "Sensirion SCD30 - CO2", "unit": "ppm"},
+      {"id": "pm-sensor", "name": "Sensirion SEN5X - PM2.5", "unit": "ug/m3"},
+      {"id": "temp-sensor", "name": "Sensirion SHT31 - Temperature", "unit": "ºC"},
+      {"id": "hum-sensor", "name": "Sensirion SHT31 - Humidity", "unit": "%"}
+    ]
+  }
+}

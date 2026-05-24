@@ -8,6 +8,8 @@ from app.schemas.planner import IntentType, PlannerOutput
 from app.schemas.response import FinalResponse, RecommendationResult
 from app.services.analysis_service import AnalysisService
 from app.services.csv_adapter import CsvAdapterError, CsvDataAdapter, CsvFileNotFoundError
+from app.services.data_adapter_factory import build_data_adapter
+from app.services.smartcitizen_api_adapter import SmartCitizenApiAdapterError
 from app.services.explainability_engine import ExplainabilityEngine
 from app.services.location_resolver import (
     AmbiguousLocationError,
@@ -29,7 +31,7 @@ class Orchestrator:
     def __init__(
         self,
         location_resolver: LocationResolver | None = None,
-        data_adapter: CsvDataAdapter | None = None,
+        data_adapter: CsvDataAdapter | None = None,  # any adapter with load_snapshot/load_recent_window
         analysis_service: AnalysisService | None = None,
         risk_service: RiskService | None = None,
         recommendation_service: RecommendationService | None = None,
@@ -126,6 +128,8 @@ class Orchestrator:
             ) from exc
         except CsvAdapterError as exc:
             raise OrchestratorError(f"Data adapter failure: {exc}") from exc
+        except SmartCitizenApiAdapterError as exc:
+            raise OrchestratorError(f"Data adapter failure: {exc}") from exc
 
     def _validate_plan(self, plan: PlannerOutput) -> None:
         allowed_intents = {intent for intent in IntentType}
@@ -143,10 +147,10 @@ class Orchestrator:
             names = ", ".join(metric.value for metric in unknown)
             raise OrchestratorError(f"Unsupported metrics in plan: {names}")
 
-    def _build_data_adapter(self, csv_data_dir: Path | None) -> CsvDataAdapter:
+    def _build_data_adapter(self, csv_data_dir: Path | None):
         if csv_data_dir is not None:
-            return CsvDataAdapter(data_dir=csv_data_dir)
-        return CsvDataAdapter.from_settings()
+            return CsvDataAdapter(data_dir=csv_data_dir, settings=self.settings)
+        return build_data_adapter(self.settings)
 
 
 def _empty_recommendation(overall_status: str) -> RecommendationResult:
